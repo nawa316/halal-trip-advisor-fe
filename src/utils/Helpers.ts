@@ -1,5 +1,4 @@
 import { Env } from '@/libs/Env';
-import { routing } from '@/libs/I18nRouting';
 
 /**
  * Resolves the public base URL of the application.
@@ -14,15 +13,10 @@ export const getBaseUrl = () => {
 };
 
 /**
- * Builds a locale-aware path by prefixing non-default locales.
+ * Returns an application-relative path.
  * @param url - The base application-relative path starting with a slash.
- * @param locale - The active locale identifier.
- * @returns The localized path, prefixed when the locale is not the default locale.
+ * @returns The normalized path.
  */
-export const getI18nPath = (url: string, locale: string) => {
-  if (locale === routing.defaultLocale) {
-    return url;
-  }
-
-  return `/${locale}${url}`;
+export const getI18nPath = (url: string) => {
+  return url;
 };

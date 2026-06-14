@@ -2,15 +2,7 @@
   "RootLayout": {
     "home_link": "Home",
     "about_link": "About",
-    "counter_link": "Counter",
-    "portfolio_link": "Portfolio",
-    "sign_in_link": "Sign in",
-    "sign_up_link": "Sign up"
-  },
-  "BaseTemplate": {
-    "description": "Starter code for your Nextjs Boilerplate with Tailwind CSS",
-    "footer_text": "© {year} {name}. Made with <author></author>.",
-    "main_navigation_label": "Main navigation"
+    "portfolio_link": "Portfolio"
   },
   "Index": {
     "meta_title": "Next.js Boilerplate Presentation",

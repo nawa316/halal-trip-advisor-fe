@@ -30,9 +30,7 @@ export default defineConfig<ChromaticConfig>({
   // Run your local dev server before starting the tests:
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
   webServer: {
-    command: process.env.CI
-      ? 'npx run-p db-server:memory start --race'
-      : 'npx run-p db-server:memory dev:next --race',
+    command: `pnpm dev:next -- --port ${PORT}`,
     url: baseURL,
     timeout: 60 * 1000,
     reuseExistingServer: !process.env.CI,
