@@ -4,7 +4,7 @@ import { getBaseUrl } from '@/utils/Helpers';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getBaseUrl();
 
-  const routes = ['', '/about'];
+  const routes = [''];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

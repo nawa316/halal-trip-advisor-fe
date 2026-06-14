@@ -1,7 +1,6 @@
 {
   "RootLayout": {
-    "home_link": "Home",
-    "about_link": "About"
+    "home_link": "Home"
   },
   "Index": {
     "meta_title": "Halaloka - Modern Halal Trip Advisor",
@@ -22,12 +21,6 @@
   },
   "CurrentCount": {
     "count": "Count: {count}"
-  },
-  "About": {
-    "meta_title": "About Halaloka",
-    "meta_description": "Learn more about Halaloka, your trusted partner for halal travel.",
-    "about_paragraph": "Welcome to Halaloka! We are dedicated to providing the best travel planning experience for Muslim travelers, ensuring your journey is comfortable, efficient, and aligned with your values.",
-    "translation_powered_by": "Translation powered by"
   },
   "SignIn": {
     "meta_title": "Sign in",
