@@ -5,7 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 interface LocationPickerProps {
   lat: number;
   lng: number;
-  onChange: (lat: number, lng: number) => void;
+  onChange: (lat: number, lng: number, name?: string) => void;
   onUseCurrentLocation: () => void;
   locating: boolean;
 }
@@ -66,7 +66,7 @@ export default function LocationPicker({
       const data = await res.json();
       if (data.features && data.features.length > 0) {
         const [longitude, latitude] = data.features[0].geometry.coordinates;
-        onChange(latitude, longitude);
+        onChange(latitude, longitude, suggestion.name);
       }
       // Reset session token after a successful retrieve
       setSessionToken(crypto.randomUUID());
@@ -76,7 +76,7 @@ export default function LocationPicker({
   };
 
   const handleMapClick = (e: any) => {
-    onChange(e.lngLat.lat, e.lngLat.lng);
+    onChange(e.lngLat.lat, e.lngLat.lng, 'Lokasi Terpilih di Peta');
   };
 
   return (

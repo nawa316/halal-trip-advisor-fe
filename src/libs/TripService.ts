@@ -6,6 +6,7 @@ const API_URL = Env.NEXT_PUBLIC_API_URL;
 export interface PlanningRequest {
   start_lat: number;
   start_long: number;
+  start_location_name?: string;
   start_time: number;
   end_time: number;
   preferences: string[];

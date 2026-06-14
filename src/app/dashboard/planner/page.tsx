@@ -13,6 +13,7 @@ import { haversine } from '@/utils/GeoUtils';
 const plannerSchema = z.object({
   start_lat: z.number({ message: 'Latitude harus berupa angka' }),
   start_long: z.number({ message: 'Longitude harus berupa angka' }),
+  start_location_name: z.string().optional(),
   start_time: z.string().min(1, 'Waktu mulai harus diisi'),
   end_time: z.string().min(1, 'Waktu berakhir harus diisi'),
   preferences: z.array(z.string()).min(1, 'Pilih minimal satu preferensi'),
@@ -75,6 +76,7 @@ const PlannerPage: React.FC = () => {
     defaultValues: {
       start_lat: -8.74685184916022, // Default Bandara Ngurah Rai Bali
       start_long: 115.16818981622217,
+      start_location_name: 'Bandara Internasional I Gusti Ngurah Rai Bali',
       max_places: 8,
       preferences: ['Tourist Attractions', 'Restaurants'],
       return_to_start: true,
@@ -93,8 +95,9 @@ const PlannerPage: React.FC = () => {
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setValue('start_lat', position.coords.latitude);
-        setValue('start_long', position.coords.longitude);
+        setValue('start_lat', position.coords.latitude, { shouldValidate: true });
+        setValue('start_long', position.coords.longitude, { shouldValidate: true });
+        setValue('start_location_name', 'Lokasi Saat Ini', { shouldValidate: true });
         setLocating(false);
       },
       () => {
@@ -375,9 +378,12 @@ const PlannerPage: React.FC = () => {
               <LocationPicker
                 lat={watch('start_lat')}
                 lng={watch('start_long')}
-                onChange={(lat, lng) => {
+                onChange={(lat, lng, name) => {
                   setValue('start_lat', lat, { shouldValidate: true });
                   setValue('start_long', lng, { shouldValidate: true });
+                  if (name) {
+                    setValue('start_location_name', name, { shouldValidate: true });
+                  }
                 }}
                 onUseCurrentLocation={handleGetCurrentLocation}
                 locating={locating}
