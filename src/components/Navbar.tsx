@@ -61,10 +61,7 @@ const Navbar: React.FC = () => {
           href="/"
           className="group flex items-center gap-2 text-2xl font-black tracking-tighter text-emerald-800"
         >
-          HALAL
-          <span className="text-gray-900 transition-colors group-hover:text-emerald-700">
-            OKA
-          </span>
+          HALALOKA
         </Link>
       </div>
 
