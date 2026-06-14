@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
         >
           HALAL
           <span className="text-gray-900 transition-colors group-hover:text-emerald-700">
-            TRIP
+            OKA
           </span>
         </Link>
       </div>

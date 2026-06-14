@@ -1,22 +1,11 @@
 'use client';
 
-import AOS from 'aos';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
-import 'aos/dist/aos.css';
 import { useAuth } from '@/contexts/AuthContext';
 
 export default function HomePage() {
   const { isAuthenticated } = useAuth();
   const router = useRouter();
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-out-cubic',
-    });
-  }, []);
 
   const handleStartPlanning = () => {
     if (isAuthenticated) {

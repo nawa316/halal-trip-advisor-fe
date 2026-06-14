@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import AppLayout from '@/components/AppLayout';
 import { AuthProvider } from '@/contexts/AuthContext';
 import '@/styles/global.css';
@@ -39,11 +39,12 @@ export const viewport: Viewport = {
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
   setRequestLocale('en');
+  const messages = await getMessages();
 
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-white">
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages} locale="en">
           <AuthProvider>
             <AppLayout>{props.children}</AppLayout>
           </AuthProvider>
