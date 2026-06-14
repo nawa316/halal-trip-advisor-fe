@@ -69,6 +69,8 @@
     "dotenv-cli": "^11.0.0",
     "drizzle-kit": "^0.31.10",
     "knip": "^6.0.1",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",

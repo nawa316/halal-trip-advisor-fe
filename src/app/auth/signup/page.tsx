@@ -40,6 +40,7 @@ const SignupPage: React.FC = () => {
 
   const onSubmit = async (data: SignupFormValues) => {
     try {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { confirmPassword, ...signupData } = data;
       await signup(signupData);
       router.push('/dashboard');
