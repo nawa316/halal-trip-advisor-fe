@@ -392,7 +392,7 @@ const PlannerPage: React.FC = () => {
                 <input
                   {...register('start_time')}
                   type="datetime-local"
-                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none"
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
                 />
               </div>
 
@@ -403,7 +403,7 @@ const PlannerPage: React.FC = () => {
                 <input
                   {...register('end_time')}
                   type="datetime-local"
-                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none"
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
                 />
               </div>
 
@@ -414,7 +414,7 @@ const PlannerPage: React.FC = () => {
                 <input
                   {...register('max_places', { valueAsNumber: true })}
                   type="number"
-                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none"
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
                 />
               </div>
 
@@ -459,7 +459,7 @@ const PlannerPage: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => handlePrefChange(group.category)}
-                      className={`text-xs font-black tracking-wider uppercase transition-colors ${
+                      className={`text-xs font-black uppercase tracking-wider transition-colors ${
                         selectedPrefs.includes(group.category)
                           ? 'text-emerald-700'
                           : 'text-gray-400'
@@ -536,7 +536,7 @@ const PlannerPage: React.FC = () => {
             <div className="space-y-6">
               <div className="grid gap-4 sm:grid-cols-3">
                 <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-                  <p className="text-xs font-bold tracking-wider text-gray-500 uppercase">
+                  <p className="text-xs font-bold uppercase tracking-wider text-gray-500">
                     Total Jarak
                   </p>
                   <p className="mt-1 text-2xl font-black text-emerald-700">
@@ -544,7 +544,7 @@ const PlannerPage: React.FC = () => {
                   </p>
                 </div>
                 <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-                  <p className="text-xs font-bold tracking-wider text-gray-500 uppercase">
+                  <p className="text-xs font-bold uppercase tracking-wider text-gray-500">
                     Total Durasi
                   </p>
                   <p className="mt-1 text-2xl font-black text-emerald-700">
@@ -553,7 +553,7 @@ const PlannerPage: React.FC = () => {
                   </p>
                 </div>
                 <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-                  <p className="text-xs font-bold tracking-wider text-gray-500 uppercase">
+                  <p className="text-xs font-bold uppercase tracking-wider text-gray-500">
                     Rata-Rata Rating
                   </p>
                   <p className="mt-1 text-2xl font-black text-emerald-700">
@@ -596,10 +596,10 @@ const PlannerPage: React.FC = () => {
                 </button>
               </div>
               <div className="relative space-y-4">
-                <div className="absolute top-4 bottom-4 left-4 w-0.5 bg-gray-200" />
+                <div className="absolute bottom-4 left-4 top-4 w-0.5 bg-gray-200" />
                 {result.itinerary.map((item, index) => (
                   <div key={item.place.id} className="relative pl-10">
-                    <div className="absolute top-2 left-2.5 h-3.5 w-3.5 rounded-full bg-emerald-600 ring-4 ring-emerald-50" />
+                    <div className="absolute left-2.5 top-2 h-3.5 w-3.5 rounded-full bg-emerald-600 ring-4 ring-emerald-50" />
                     <div
                       onClick={() => {
                         if (
@@ -627,7 +627,7 @@ const PlannerPage: React.FC = () => {
                             >
                               {item.activity_label || item.place.type}
                             </span>
-                            <span className="rounded bg-gray-100 px-2 py-0.5 text-[10px] font-bold text-gray-500 uppercase">
+                            <span className="rounded bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase text-gray-500">
                               {item.place.type}
                             </span>
                             <span className="text-xs text-gray-400">
@@ -670,7 +670,7 @@ const PlannerPage: React.FC = () => {
                         </div>
                         <div className="mt-4 flex gap-6 border-l border-gray-100 pl-6 sm:mt-0">
                           <div className="text-right">
-                            <p className="text-[10px] font-bold text-gray-400 uppercase">
+                            <p className="text-[10px] font-bold uppercase text-gray-400">
                               Tiba
                             </p>
                             <p className="text-sm font-black text-gray-900">
@@ -685,7 +685,7 @@ const PlannerPage: React.FC = () => {
                             </p>
                           </div>
                           <div className="text-right">
-                            <p className="text-[10px] font-bold text-gray-400 uppercase">
+                            <p className="text-[10px] font-bold uppercase text-gray-400">
                               Pergi
                             </p>
                             <p className="text-sm font-black text-gray-900">
@@ -759,7 +759,7 @@ const PlannerPage: React.FC = () => {
                   placeholder="Cari nama tempat..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-2.5 text-sm focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-2.5 text-sm focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
                 />
                 <div className="scrollbar-hide flex gap-2 overflow-x-auto pb-1">
                   <button
@@ -767,7 +767,7 @@ const PlannerPage: React.FC = () => {
                       setSearchTerm('');
                       fetchAlternatives(altTypeFilter, altCategoryFilter);
                     }}
-                    className="rounded-full bg-emerald-100 px-4 py-1.5 text-[10px] font-bold whitespace-nowrap text-emerald-700"
+                    className="whitespace-nowrap rounded-full bg-emerald-100 px-4 py-1.5 text-[10px] font-bold text-emerald-700"
                   >
                     Tipe: {altTypeFilter}
                   </button>
@@ -776,7 +776,7 @@ const PlannerPage: React.FC = () => {
                       setSearchTerm('');
                       fetchAlternatives('', altCategoryFilter);
                     }}
-                    className="rounded-full bg-gray-100 px-4 py-1.5 text-[10px] font-bold whitespace-nowrap text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"
+                    className="whitespace-nowrap rounded-full bg-gray-100 px-4 py-1.5 text-[10px] font-bold text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"
                   >
                     Kategori: {altCategoryFilter}
                   </button>
@@ -785,7 +785,7 @@ const PlannerPage: React.FC = () => {
                       setSearchTerm('');
                       fetchAlternatives('', '');
                     }}
-                    className="rounded-full bg-gray-100 px-4 py-1.5 text-[10px] font-bold whitespace-nowrap text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"
+                    className="whitespace-nowrap rounded-full bg-gray-100 px-4 py-1.5 text-[10px] font-bold text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"
                   >
                     Lihat Semua
                   </button>

@@ -126,7 +126,7 @@ export default function TripMap({
             anchor="bottom"
           >
             <div className="group relative flex cursor-pointer flex-col items-center">
-              <div className="pointer-events-none absolute -top-8 z-10 flex rounded bg-gray-900 px-2 py-1 text-xs font-bold whitespace-nowrap text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
+              <div className="pointer-events-none absolute -top-8 z-10 flex whitespace-nowrap rounded bg-gray-900 px-2 py-1 text-xs font-bold text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100">
                 {idx + 1}. {item.place.name}
               </div>
               <div
@@ -146,7 +146,7 @@ export default function TripMap({
       </Map>
 
       {return_geometry && (
-        <div className="absolute top-4 left-4 z-10">
+        <div className="absolute left-4 top-4 z-10">
           <button
             onClick={() => setShowReturnPath(!showReturnPath)}
             className="flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-xs font-bold text-gray-700 shadow-md transition-all hover:bg-gray-50 hover:text-emerald-600"

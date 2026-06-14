@@ -12,6 +12,7 @@ interface AuthContextType {
   signup: (data: any) => Promise<void>;
   logout: () => void;
   clearError: () => void;
+  setUser: React.Dispatch<React.SetStateAction<User | null>>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -97,6 +98,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
         signup,
         logout,
         clearError,
+        setUser,
       }}
     >
       {children}

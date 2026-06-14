@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <nav aria-label="Main navigation" className="hidden md:block">
-        <ul className="flex items-center gap-x-8 text-sm font-bold tracking-widest text-gray-600 uppercase">
+        <ul className="flex items-center gap-x-8 text-sm font-bold uppercase tracking-widest text-gray-600">
           <li>
             <Link className="transition hover:text-emerald-700" href="/#fitur">
               Fitur

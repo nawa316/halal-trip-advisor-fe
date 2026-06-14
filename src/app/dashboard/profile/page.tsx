@@ -65,7 +65,7 @@ const ProfilePage: React.FC = () => {
               disabled
               className="block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-500 focus:outline-none"
             />
-            <p className="text-[10px] text-gray-400 italic">
+            <p className="text-[10px] italic text-gray-400">
               Email tidak dapat diubah.
             </p>
           </div>
@@ -79,7 +79,7 @@ const ProfilePage: React.FC = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Masukkan nama lengkap Anda"
-              className="block w-full rounded-xl border border-gray-300 px-4 py-3 text-sm transition-all focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none"
+              className="block w-full rounded-xl border border-gray-300 px-4 py-3 text-sm transition-all focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
               required
             />
           </div>

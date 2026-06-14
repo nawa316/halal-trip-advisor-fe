@@ -81,7 +81,7 @@ const TripsPage: React.FC = () => {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-2xl">
                   🏝️
                 </div>
-                <span className="rounded-full bg-gray-100 px-3 py-1 text-[10px] font-bold text-gray-500 uppercase">
+                <span className="rounded-full bg-gray-100 px-3 py-1 text-[10px] font-bold uppercase text-gray-500">
                   {new Date(trip.start_time * 1000).toLocaleDateString()}
                 </span>
               </div>

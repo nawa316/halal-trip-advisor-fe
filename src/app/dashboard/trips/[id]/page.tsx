@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React, { useEffect, useState, use } from 'react';
+import { useEffect, useState, use } from 'react';
 import TripService, { TripDetail } from '@/libs/TripService';
 
 interface TripDetailPageProps {
@@ -102,7 +102,7 @@ const TripDetailPage = ({ params }: TripDetailPageProps) => {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-          <p className="text-xs font-bold tracking-wider text-gray-400 uppercase">
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
             Total Jarak
           </p>
           <p className="mt-1 text-2xl font-black text-emerald-700">
@@ -110,7 +110,7 @@ const TripDetailPage = ({ params }: TripDetailPageProps) => {
           </p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-          <p className="text-xs font-bold tracking-wider text-gray-400 uppercase">
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
             Waktu Mulai
           </p>
           <p className="mt-1 text-2xl font-black text-gray-900">
@@ -121,7 +121,7 @@ const TripDetailPage = ({ params }: TripDetailPageProps) => {
           </p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-          <p className="text-xs font-bold tracking-wider text-gray-400 uppercase">
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
             Waktu Selesai
           </p>
           <p className="mt-1 text-2xl font-black text-gray-900">
@@ -136,16 +136,16 @@ const TripDetailPage = ({ params }: TripDetailPageProps) => {
       <div className="space-y-6">
         <h2 className="text-xl font-bold text-gray-900">Rute Perjalanan 📍</h2>
         <div className="relative space-y-4">
-          <div className="absolute top-4 bottom-4 left-4 w-0.5 bg-gray-200" />
+          <div className="absolute bottom-4 left-4 top-4 w-0.5 bg-gray-200" />
           {trip.itinerary && trip.itinerary.length > 0 ? (
             trip.itinerary.map((item, index) => (
               <div key={item.place.id} className="relative pl-10">
-                <div className="absolute top-2 left-2.5 h-3.5 w-3.5 rounded-full bg-emerald-600 ring-4 ring-emerald-50" />
+                <div className="absolute left-2.5 top-2 h-3.5 w-3.5 rounded-full bg-emerald-600 ring-4 ring-emerald-50" />
                 <div className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm transition-all hover:shadow-md">
                   <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <span className="rounded bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 uppercase">
+                        <span className="rounded bg-emerald-50 px-2 py-0.5 text-[10px] font-bold uppercase text-emerald-700">
                           {item.place.type}
                         </span>
                         <span className="text-xs text-gray-400">
@@ -176,7 +176,7 @@ const TripDetailPage = ({ params }: TripDetailPageProps) => {
             ))
           ) : (
             <div className="ml-10 flex flex-col items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 py-10 text-center">
-              <p className="text-gray-500 italic">
+              <p className="italic text-gray-500">
                 Tidak ada item rute untuk trip ini.
               </p>
             </div>

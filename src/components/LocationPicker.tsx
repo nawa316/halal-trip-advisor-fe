@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Map, { Marker } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -53,7 +53,7 @@ export default function LocationPicker({
     }, 500);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [searchQuery]);
+  }, [searchQuery, sessionToken]);
 
   const handleSelectSuggestion = async (suggestion: any) => {
     setSearchQuery(suggestion.name);
@@ -136,7 +136,7 @@ export default function LocationPicker({
         {activeTab === 'search' && (
           <div className="relative space-y-3">
             <div>
-              <p className="mb-1 text-[10px] font-bold text-gray-400 uppercase">
+              <p className="mb-1 text-[10px] font-bold uppercase text-gray-400">
                 Ketik Alamat atau Nama Tempat
               </p>
               <div className="relative">
@@ -145,17 +145,17 @@ export default function LocationPicker({
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Contoh: Monas, Jakarta"
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-10 text-sm focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none"
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2 pr-10 text-sm focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
                 />
                 {isSearching && (
-                  <div className="absolute top-2.5 right-3 h-4 w-4 animate-spin rounded-full border-2 border-emerald-500 border-t-transparent"></div>
+                  <div className="absolute right-3 top-2.5 h-4 w-4 animate-spin rounded-full border-2 border-emerald-500 border-t-transparent"></div>
                 )}
               </div>
             </div>
 
             {/* Suggestions Dropdown */}
             {suggestions.length > 0 && (
-              <div className="absolute right-0 left-0 z-10 mt-1 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-lg">
+              <div className="absolute left-0 right-0 z-10 mt-1 overflow-hidden rounded-lg border border-gray-100 bg-white shadow-lg">
                 {suggestions.map((suggestion) => (
                   <button
                     key={suggestion.mapbox_id}
@@ -235,7 +235,7 @@ export default function LocationPicker({
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-2">
               <div>
-                <p className="text-[10px] font-bold text-gray-400 uppercase">
+                <p className="text-[10px] font-bold uppercase text-gray-400">
                   Latitude
                 </p>
                 <input
@@ -245,11 +245,11 @@ export default function LocationPicker({
                   onChange={(e) =>
                     onChange(parseFloat(e.target.value) || 0, lng)
                   }
-                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-xs focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none"
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-xs focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
                 />
               </div>
               <div>
-                <p className="text-[10px] font-bold text-gray-400 uppercase">
+                <p className="text-[10px] font-bold uppercase text-gray-400">
                   Longitude
                 </p>
                 <input
@@ -259,7 +259,7 @@ export default function LocationPicker({
                   onChange={(e) =>
                     onChange(lat, parseFloat(e.target.value) || 0)
                   }
-                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-xs focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none"
+                  className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-xs focus:border-emerald-500 focus:outline-none focus:ring-emerald-500"
                 />
               </div>
             </div>

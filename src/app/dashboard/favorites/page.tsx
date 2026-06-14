@@ -91,7 +91,7 @@ const FavoritesPage: React.FC = () => {
 
               <div className="mt-4 space-y-2">
                 <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <span className="rounded bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 uppercase">
+                  <span className="rounded bg-emerald-50 px-2 py-0.5 text-[10px] font-bold uppercase text-emerald-700">
                     {fav.place.type}
                   </span>
                   <span className="text-xs text-gray-400">

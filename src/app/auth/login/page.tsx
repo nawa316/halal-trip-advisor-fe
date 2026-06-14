@@ -78,7 +78,7 @@ const LoginPage: React.FC = () => {
                 required
                 className={`mt-1 block w-full appearance-none rounded-lg border ${
                   errors.email ? 'border-red-300' : 'border-gray-300'
-                } px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none sm:text-sm`}
+                } px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-emerald-500 focus:outline-none focus:ring-emerald-500 sm:text-sm`}
                 placeholder="email@contoh.com"
               />
               {errors.email && (
@@ -101,7 +101,7 @@ const LoginPage: React.FC = () => {
                 required
                 className={`mt-1 block w-full appearance-none rounded-lg border ${
                   errors.password ? 'border-red-300' : 'border-gray-300'
-                } px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-emerald-500 focus:ring-emerald-500 focus:outline-none sm:text-sm`}
+                } px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-emerald-500 focus:outline-none focus:ring-emerald-500 sm:text-sm`}
                 placeholder="••••••••"
               />
               {errors.password && (
@@ -116,7 +116,7 @@ const LoginPage: React.FC = () => {
             <button
               type="submit"
               disabled={mounted ? loading : false}
-              className="group relative flex w-full justify-center rounded-full border border-transparent bg-emerald-600 px-4 py-2 text-sm font-bold text-white transition-all hover:bg-emerald-700 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:outline-none disabled:opacity-50"
+              className="group relative flex w-full justify-center rounded-full border border-transparent bg-emerald-600 px-4 py-2 text-sm font-bold text-white transition-all hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:opacity-50"
             >
               {mounted && loading ? 'Memproses...' : 'Masuk'}
             </button>

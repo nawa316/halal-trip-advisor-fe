@@ -113,8 +113,8 @@ Clone this project and use it to create your own Next.js project. You can check 
 
 **Live demo: [Next.js Boilerplate](https://demo.nextjs-boilerplate.com)**
 
-| Sign Up | Sign In |
-| --- | --- |
+| Sign Up                                                                                                                                 | Sign In                                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Next.js Boilerplate SaaS Sign Up](public/assets/images/nextjs-boilerplate-sign-in.png)](https://demo.nextjs-boilerplate.com/sign-up) | [![Next.js Boilerplate SaaS Sign In](public/assets/images/nextjs-boilerplate-sign-in.png)](https://demo.nextjs-boilerplate.com/sign-in) |
 
 ### Features
@@ -334,19 +334,19 @@ One of the benefits of using Conventional Commits is the ability to automaticall
 
 Every commit message follows Conventional Commits and must begin with a type prefix (e.g., `feat: add login page`). The table below lists the available types:
 
-| Type | Description |
-| --- | --- |
-| `feat` | New feature or functionality |
-| `fix` | Bug fix |
-| `docs` | Documentation only |
-| `style` | Code formatting without logic changes |
+| Type       | Description                                 |
+| ---------- | ------------------------------------------- |
+| `feat`     | New feature or functionality                |
+| `fix`      | Bug fix                                     |
+| `docs`     | Documentation only                          |
+| `style`    | Code formatting without logic changes       |
 | `refactor` | Code restructuring without behavior changes |
-| `perf` | Performance improvement |
-| `test` | Adding or updating tests |
-| `build` | Build system |
-| `ci` | CI configuration and scripts |
-| `chore` | Maintenance tasks (dependencies, config) |
-| `revert` | Reverts a previous commit |
+| `perf`     | Performance improvement                     |
+| `test`     | Adding or updating tests                    |
+| `build`    | Build system                                |
+| `ci`       | CI configuration and scripts                |
+| `chore`    | Maintenance tasks (dependencies, config)    |
+| `revert`   | Reverts a previous commit                   |
 
 ### CodeRabbit AI Code Reviews
 

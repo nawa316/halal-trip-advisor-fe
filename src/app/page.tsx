@@ -43,7 +43,7 @@ export default function HomePage() {
       >
         <div className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top_right,_rgba(16,185,129,0.15),_transparent_60%),radial-gradient(circle_at_bottom_left,_rgba(245,158,11,0.12),_transparent_60%)]" />
         <div className="relative max-w-3xl space-y-6">
-          <div className="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold tracking-wider text-emerald-800 uppercase">
+          <div className="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800">
             Solusi Wisata Halal Modern
           </div>
           <h1 className="text-5xl font-extrabold tracking-tight text-gray-950 md:text-7xl">
@@ -124,7 +124,7 @@ export default function HomePage() {
       {/* Persona Section */}
       <section className="space-y-10" id="persona">
         <div data-aos="fade-right" className="max-w-2xl space-y-3">
-          <p className="text-sm font-bold tracking-widest text-emerald-700 uppercase">
+          <p className="text-sm font-bold uppercase tracking-widest text-emerald-700">
             Didesain untuk Anda
           </p>
           <h2 className="text-3xl font-bold tracking-tight text-gray-950 md:text-4xl">
@@ -159,7 +159,7 @@ export default function HomePage() {
               data-aos-delay={index * 100}
               className={`${persona.color} rounded-[2rem] p-8 text-white shadow-xl`}
             >
-              <p className="text-xs font-bold tracking-[0.2em] uppercase opacity-70">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] opacity-70">
                 {persona.role}
               </p>
               <h3 className="mt-4 text-3xl font-bold">{persona.name}</h3>
